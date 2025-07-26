@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wallet Risk Scoring Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            margin: 20px auto;
+        }
+
+        input[type="file"],
+        input[type="submit"],
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        h2 {
+            margin-top: 40px;
+            font-size: 24px;
+            color: #444;
+        }
+
+        canvas {
+            margin-top: 20px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Transaction CSV to Get Wallet Risk Scores</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <input type="submit" value="Upload">
+    </form>
+
+    {% if tables %}
+        <h2>Scored Wallets</h2>
+        {{ tables|safe }}
+
+        <form action="/download" method="get">
+            <button type="submit">Download Scored CSV</button>
+        </form>
+
+        <h2>Risk Level Distribution</h2>
+        <canvas id="riskChart"></canvas>
+        <script>
+            const ctx = document.getElementById('riskChart').getContext('2d');
+            const riskChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: {{ risk_labels|safe }},
+                    datasets: [{
+                        label: 'Number of Wallets',
+                        data: {{ risk_counts|safe }},
+                        backgroundColor: ['green', 'yellow', 'orange', 'red']
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: 'Wallet Risk Category Counts',
+                            font: { size: 16 }
+                        }
+                    }
+                }
+            });
+        </script>
+    {% endif %}
+</body>
+</html>
