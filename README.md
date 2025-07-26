@@ -97,7 +97,7 @@ Edit
 ## 🖼️ Dashboard Screenshots
 
 ### 🧾 Upload CSV Interface
-![Upload CSV](https://github.com/Rushikesh1912/Wallet-Risk-Scoring/blob/main/outputs/screenshots/upload_csv_ui.png)
+![Result](https://raw.githubusercontent.com/Rushikesh1912/Wallet-Risk-Scoring/main/output/result.png.jpg)
 
 ### 🧮 Risk Prediction Output
 ![Risk Prediction Output](https://github.com/Rushikesh1912/Wallet-Risk-Scoring/blob/main/outputs/screenshots/result_output_ui.png)
