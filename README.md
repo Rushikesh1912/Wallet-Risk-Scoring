@@ -65,11 +65,12 @@ Edit
 
 ## 📷 Screenshots
 
-### 🔍 Risk Score Distribution
-![Risk Score Distribution](output/outputs/plots/risk_score_distribution.png)
+### 🔍 Risk Score Distribution  
+![Risk Score Distribution](https://raw.githubusercontent.com/Rushikesh1912/Wallet-Risk-Scoring/main/outputs/plots/risk_score_distribution.png)
 
-### 🏆 Top 10 Risky Wallets
-![Top 10 Wallets](output/outputs/plots/top_10_wallets.png)
+### 🏆 Top 10 Risky Wallets  
+![Top 10 Wallets](https://raw.githubusercontent.com/Rushikesh1912/Wallet-Risk-Scoring/main/outputs/plots/top_10_wallets.png)
+
 
 ---
 
