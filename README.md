@@ -85,6 +85,24 @@ Edit
 
 ---
 
+## 🚀 Dashboard Features
+
+- Upload your own wallet CSV file via a simple dashboard
+- Get instant risk scores, visualizations, and top wallet summaries
+- Data-driven scoring based on behavior and transaction metrics
+- Clean dashboard UI built with Streamlit
+
+---
+
+## 🖼️ Dashboard Screenshots
+
+### 🧾 Upload CSV Interface
+![Upload CSV](https://github.com/Rushikesh1912/Wallet-Risk-Scoring/blob/main/outputs/screenshots/upload_csv_ui.png)
+
+### 🧮 Risk Prediction Output
+![Risk Prediction Output](https://github.com/Rushikesh1912/Wallet-Risk-Scoring/blob/main/outputs/screenshots/result_output_ui.png)
+
+
 ## 📦 Setup Instructions
 
 ```bash
